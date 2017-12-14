@@ -11,7 +11,7 @@ module Aliyun
     # should refer to {STS::Client} for normal use.
     class Protocol
 
-      ENDPOINT = 'https://sts.aliyuncs.com'
+      ENDPOINT = ServerConfig.cn? ? 'https://sts.aliyuncs.com' : 'https://sts.ap-northeast-1.aliyuncs.com'
       FORMAT = 'XML'
       API_VERSION = '2015-04-01'
       SIGNATURE_METHOD = 'HMAC-SHA1'
